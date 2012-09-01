@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+  	<form-bean name="loginForm" type="com.oa.struts.forms.LoginForm"/>
+  	<form-bean name="attendanceForm" type="com.oa.struts.forms.AttendanceForm"></form-bean>
+  	<form-bean name="attQuerryForm" type="com.oa.struts.forms.AttQuerryForm"></form-bean>
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action path="/login" name="loginForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy" input="/login.jsp" validate="false">
+		<forward name="stafflogin" path="/index.jsp"></forward>
+		<forward name="failed" path="/login.jsp"></forward>
+		<forward name="managerlogin" path="/index.jsp"></forward>
+	</action>
+	<action path="/attendance" name="attendanceForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy" input="/attendance.jsp" validate="false">
+  		<forward name="on" path="/attendance.jsp"></forward>
+  		<forward name="off" path="/attendance.jsp"></forward>
+  	</action>
+  	<action path="/attQuerry" name="attQuerryForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy" input="/attendanceQuerry.jsp" validate="false">
+  		<forward name="attendanceRecord" path="/attendanceRecord.jsp"></forward>
+  	</action>
+  	<action path="/logout" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="logout" path="/login.jsp"></forward>
+  	</action>
+  	<action path="/refresh" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="res" path="/left.jsp"></forward>
+  	</action>
+  	<action path="/addRegime" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/deleteRegime" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/alterRegime" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/addNews" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/deleteNews" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/alterNews" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/addNotice" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/deleteNotice" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/alterNotice" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/publishMeeting" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/alterMeeting" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/deleteMeeting" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/offApply" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/agreeOff" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/rejectOff" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/deleteOff" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/register" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/alterStaff" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/deleteStaff" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/alterInfo" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/sendMail" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/deleteMail" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/deleteAllMail" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/deleteOneMail" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  	<action path="/toRead" scope="request" type="org.springframework.web.struts.DelegatingActionProxy"/>
+  
+  </action-mappings>
+  <message-resources parameter="com.oa.struts.ApplicationResources" />
+  <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+  	<set-property property="contextConfigLocation" value="/WEB-INF/beans-config.xml"/>
+  </plug-in>
+</struts-config>
+

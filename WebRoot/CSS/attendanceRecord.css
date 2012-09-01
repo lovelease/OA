@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+@import "main.css";
+
+table{
+	border-collapse:collapse;
+}
+td{
+	width:150px;
+	text-align:center;
+	border:1px solid black;
+}
+#result{
+	margin-top:20px;
+}

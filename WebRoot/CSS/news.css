@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+@import "regime.css";
+@import "main.css";
+
+#date{
+	text-size:14px;
+	line-height:20px;
+	color:#660099;
+}
+#content{
+	height:383px;
+}

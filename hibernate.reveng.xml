@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="STAFF" schema="OA"
+		class="com.oa.hibernate.beans.Staff">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="REGIME" schema="OA" class="Regime">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="NEWS" schema="OA"
+		class="com.oa.hibernate.beans.News">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="NOTICE" schema="OA"
+		class="com.oa.hibernate.beans.Notice">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="ATTENDANCE" schema="OA"
+		class="com.oa.hibernate.beans.Attendance">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="MEETING" schema="OA"
+		class="com.oa.hibernate.beans.Meeting">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="OFF" schema="OA" class="com.oa.hibernate.beans.Off">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="MAIL" schema="OA"
+		class="com.oa.hibernate.beans.Mail">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TT" schema="OA" class="com.oa.hibernate.beansTt">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+<table name="PASSINGUSER" schema="PASSING" class="PassingUser">
+	<primary-key>
+		<generator class="sequence"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

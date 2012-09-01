@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+@import "main.css";
+#title{
+	position:relative;
+	color:#003366;
+	left:10px;
+	bottom:3px;
+}
+#titlebg{
+	position:absolute;
+	z-index:-1;
+	top:8px;
+	width:87px;
+	height:30px
+}
+#bgimg{
+	position:absolute;
+	left:125px;
+	background-image:url("../IMG/mailbg.png");
+	width:750px;
+	height:448px;
+	margin-top:20px;
+}
+#titleinput{
+	margin-left:151px;
+	margin-top:8px;
+	width:385px;
+}
+#dropone{
+	cursor:hand;
+	width:34px;
+	height:34px;
+	margin-left:5px;
+	margin-top:2px;
+}
+#content{
+	width:600px;
+	height:240px;
+	margin-left:75px;
+	margin-top:75px;
+	overflow-y:auto;
+}
+#sendmail{
+	margin-left:75px;
+	margin-top:7px;
+	cursor:hand;
+	width:40px;
+	height:40px;
+}

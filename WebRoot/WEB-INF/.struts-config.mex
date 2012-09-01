@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/login.do" location="50,50" dimension="220,96" />
+  <StrutsActivity path="/attendance.do" location="950,50" dimension="331,96" />
+  <StrutsActivity path="/attQuerry.do" location="950,450" dimension="331,96" />
+  <StrutsActivity path="/logout.do" location="350,1650" dimension="331,96" />
+  <StrutsActivity path="/refresh.do" location="650,1450" dimension="331,96" />
+  <StrutsActivity path="/addRegime.do" location="350,350" dimension="331,96" />
+  <StrutsActivity path="/deleteRegime.do" location="950,650" dimension="331,96" />
+  <StrutsActivity path="/alterRegime.do" location="50,750" dimension="331,96" />
+  <StrutsActivity path="/addNews.do" location="650,850" dimension="331,96" />
+  <StrutsActivity path="/deleteNews.do" location="50,950" dimension="331,96" />
+  <StrutsActivity path="/alterNews.do" location="650,1050" dimension="331,96" />
+  <StrutsActivity path="/addNotice.do" location="50,1150" dimension="331,96" />
+  <StrutsActivity path="/deleteNotice.do" location="650,1250" dimension="331,96" />
+  <StrutsActivity path="/alterNotice.do" location="50,1350" dimension="331,96" />
+  <StrutsActivity path="/publishMeeting.do" location="1250,250" dimension="331,96" />
+  <StrutsActivity path="/alterMeeting.do" location="1250,1050" dimension="331,96" />
+  <StrutsActivity path="/deleteMeeting.do" location="1250,1250" dimension="331,96" />
+  <StrutsActivity path="/offApply.do" location="1250,1450" dimension="331,96" />
+  <StrutsActivity path="/agreeOff.do" location="950,1650" dimension="331,96" />
+  <StrutsActivity path="/rejectOff.do" location="50,1850" dimension="331,96" />
+  <StrutsActivity path="/deleteOff.do" location="650,1850" dimension="331,96" />
+  <StrutsActivity path="/register.do" location="1250,1850" dimension="331,96" />
+  <StrutsActivity path="/alterStaff.do" location="50,2050" dimension="331,96" />
+  <StrutsActivity path="/deleteStaff.do" location="650,2050" dimension="331,96" />
+  <StrutsActivity path="/alterInfo.do" location="1550,450" dimension="331,96" />
+  <StrutsActivity path="/sendMail.do" location="1550,650" dimension="331,96" />
+  <StrutsActivity path="/deleteMail.do" location="1550,850" dimension="331,96" />
+  <StrutsActivity path="/deleteAllMail.do" location="1550,1650" dimension="331,96" />
+  <StrutsActivity path="/deleteOneMail.do" location="1250,2050" dimension="331,96" />
+  <StrutsActivity path="/index.jsp" location="345,195" dimension="81,51" />
+  <StrutsActivity path="/login.jsp" location="350,50" dimension="80,51" />
+  <StrutsActivity path="/attendance.jsp" location="50,250" dimension="112,51" />
+  <StrutsActivity path="/attendanceRecord.jsp" location="330,195" dimension="149,51" />
+  <StrutsActivity path="/attendanceQuerry.jsp" location="350,550" dimension="148,51" />
+  <StrutsActivity path="/left.jsp" location="1250,850" dimension="70,51" />
+  <StrutsActivity path="/top.jsp" location="50,1550" dimension="71,51" />
+  <StrutsActivity path="/regime.jsp" location="650,550" dimension="90,51" />
+  <StrutsActivity path="attendance.jsp" location="950,250" dimension="107,51" />
+  <StrutsActivity path="index.jsp" location="650,150" dimension="76,51" />
+  <StrutsActivity path="attendanceRecord.jsp" location="50,550" dimension="144,51" />
+  <StrutsActivity path="/toRead.do" />
+  <StrutsTransition id="/login.do,stafflogin,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="147,146" />
+      <AbsolutePoint location="147,165" />
+      <AbsolutePoint location="385,165" />
+      <AbsolutePoint location="385,195" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/attQuerry.do,attendanceRecord,/attendanceRecord.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1145,450" />
+      <AbsolutePoint location="1145,220" />
+      <AbsolutePoint location="479,220" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,failed,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="160,98" />
+      <AbsolutePoint location="390,75" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,managerlogin,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="270,116" />
+      <AbsolutePoint location="415,116" />
+      <AbsolutePoint location="415,195" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/attendanceQuerry.jsp,null,/attQuerry.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="403,550" />
+      <AbsolutePoint location="403,528" />
+      <AbsolutePoint location="950,528" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/refresh.do,res,/left.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="815,1498" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/attendance.jsp,null,/attendance.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,275" />
+      <AbsolutePoint location="-25,275" />
+      <AbsolutePoint location="-25,-25" />
+      <AbsolutePoint location="1115,-25" />
+      <AbsolutePoint location="1115,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/attendance.do,off,/attendance.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1115,146" />
+      <AbsolutePoint location="1115,316" />
+      <AbsolutePoint location="122,316" />
+      <AbsolutePoint location="122,301" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.jsp,null,/login.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,56" />
+      <AbsolutePoint location="270,56" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/attendance.do,on,/attendance.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,86" />
+      <AbsolutePoint location="831,86" />
+      <AbsolutePoint location="831,275" />
+      <AbsolutePoint location="162,275" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logout.do,logout,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="390,75" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

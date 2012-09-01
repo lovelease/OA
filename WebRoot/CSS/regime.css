@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+@import "main.css";
+
+body{
+	text-family:微软雅黑;
+	text-decoration:none;
+}
+#add{
+	cursor:hand;
+	text-decoration:underline;
+	margin-left:85px;
+}
+#rounddiv{
+	background-image:url("../IMG/rounddiv.png");
+	padding-top:20px;
+	padding-left:25px;
+	margin-left:11%;
+	width:755px;
+	height:437px;
+}
+.alter{
+	float:right;
+	cursor:hand;
+	border:0;
+	width:20px;
+	height:20px;
+}
+#mark{
+	border:0;
+	width:17px;
+	height:17px;
+}
+span{
+	text-size:14px;
+	line-height:20px;
+}
+#content{
+	width:700px;
+	height:385px;
+	overflow-pageINdex:hidden;
+	overflow-y:hidden;
+}
+#pages{
+	margin-left:135px;
+}
+#titlebg{
+	position:absolute;
+	z-index:-1;
+	top:8px;
+	width:87px;
+	height:30px
+}
+#title{
+	position:relative;
+	color:#003366;
+	left:10px;
+	bottom:3px;
+}
+a:link{
+	color:#003366;
+}
+a:visited{
+	color:#003366;
+}

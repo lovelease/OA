@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+body{
+	font-family:"微软雅黑";
+	background-color:#ccccff;
+	text-align:center;}
+
+.form{
+	padding:20px;
+	width:350px;
+	height:130px;
+	border-style:double;
+	border-color:#ffffcc;}
+.time{
+	margin-top:10%;
+	margin-left:40%;}
+.message{
+	padding:10px;
+	margin-top:100px;
+	text-align:center;
+	color:red;}
+#valid{
+	width:105;
+}
+.center{
+	text-align:center;
+}
+#userId{
+	width:105px;
+}

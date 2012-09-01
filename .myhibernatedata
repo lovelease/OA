@@ -1,0 +1,22 @@
+#
+#Wed May 20 19:49:12 CST 2009
+genBasicCompId=false
+sessionFactoryName=com.oa.hibernate.util.HibernateSessionFactory
+profile=
+daoSFId=
+version=3.1
+jndiPath=
+detectM2M=false
+reStrategyClass=
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+libInstallFolder=WebRoot/WEB-INF/lib
+addLibs2Project=false
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+reSettingsFile=/OA/hibernate.reveng.xml
+configFile=/OA/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=false

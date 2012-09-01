@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+@import "main.css";
+#title{
+	position:relative;
+	color:#003366;
+	left:10px;
+	bottom:3px;
+}
+#apply{
+	position:relative;
+	cursor:hand;
+	text-decoration:underline;
+	left:50px;
+}
+#deleteAll{
+	position:relative;
+	cursor:hand;
+	text-decoration:underline;
+	left:50px;
+}
+#titlebg{
+	position:absolute;
+	z-index:-1;
+	top:8px;
+	width:87px;
+	height:30px
+}
+#rounddiv{
+	position:absolute;
+	top:45px;
+	left:34px;
+	background-image:url("../IMG/background.png");
+	width:950px;
+	height:467px;
+}
+#head{
+	font-family:"华文彩云";
+	margin-top:20px;
+	margin-left:40px;
+	color:#003366;
+}
+#content{
+	width:893px;
+	height:385px;
+	margin-left:40px;
+	overflow-y:auto;
+}
+.hand{
+	text-decoration:underline;
+	cursor:hand;
+}
+td{
+	text-align:center;
+	border:1px solid;
+}
+#applier{
+	width:80px;
+}
+#from{
+	width:180px;
+}
+#to{
+	width:180px;
+}
+#reason{
+	width:280px;
+}
+#status{
+	width:55px;
+}
+.butt{
+	width:25px;
+	height:25px;
+	cursor:hand;
+}

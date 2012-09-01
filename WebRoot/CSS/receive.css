@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+@import "main.css";
+#title{
+	position:relative;
+	color:#003366;
+	left:10px;
+	bottom:3px;
+}
+#titlebg{
+	position:absolute;
+	z-index:-1;
+	top:8px;
+	width:87px;
+	height:30px
+}
+#rounddiv{
+	position:absolute;
+	top:45px;
+	left:34px;
+	background-image:url("../IMG/background.png");
+	width:950px;
+	height:467px;
+}
+#deleteAll{
+	position:absolute;
+	top:5px;
+	left:150px;
+	width:40px;
+	height:40px;
+	cursor:hand;
+}
+td{
+	border:1px solid;
+}
+#titlediv{
+	margin-left:100px;
+	margin-top:20px;
+}
+#maildiv{
+	overflow-y:auto;
+	margin-left:100px;
+	width:752px;
+	height:395px;
+}
+.butt{
+	width:20px;
+	height:22px;
+	cursor:hand;
+}
+#delete{
+	width:40px;
+}

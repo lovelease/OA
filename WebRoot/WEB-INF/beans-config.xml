@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+			<value>oracle.jdbc.driver.OracleDriver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:oracle:thin:@192.168.1.165:1521:orcl</value>
+		</property>
+		<property name="username">
+			<value>oa</value>
+		</property>
+		<property name="password">
+			<value>oa</value>
+		</property>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"
+		destroy-method="close">
+		<property name="dataSource">
+			<ref bean="dataSource"/>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/oa/hibernate/beans/Staff.hbm.xml</value>
+				<value>com/oa/hibernate/beans/Regime.hbm.xml</value>
+				<value>com/oa/hibernate/beans/News.hbm.xml</value>
+				<value>com/oa/hibernate/beans/Notice.hbm.xml</value>
+				<value>com/oa/hibernate/beans/Attendance.hbm.xml</value>
+				<value>com/oa/hibernate/beans/Meeting.hbm.xml</value>
+				<value>com/oa/hibernate/beans/Off.hbm.xml</value>
+				<value>com/oa/hibernate/beans/Mail.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.OracleDialect
+				</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="staffDao" class="com.oa.hibernate.dao.StaffDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="regimeDao" class="com.oa.hibernate.dao.RegimeDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="newsDao" class="com.oa.hibernate.dao.NewsDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="noticeDao" class="com.oa.hibernate.dao.NoticeDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="attendanceDao" class="com.oa.hibernate.dao.AttendanceDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="meetingDao" class="com.oa.hibernate.dao.MeetingDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="offDao" class="com.oa.hibernate.dao.OffDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="mailDao" class="com.oa.hibernate.dao.MailDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean name="/refresh" class="com.oa.struts.actions.RefreshAction">
+		<property name="staffDao">
+			<ref bean="staffDao"/>
+		</property>
+		<property name="regimeDao">
+			<ref bean="regimeDao"/>
+		</property>
+		<property name="newsDao">
+			<ref bean="newsDao"/>
+		</property>
+		<property name="noticeDao">
+			<ref bean="noticeDao"/>
+		</property>
+		<property name="meetingDao">
+			<ref bean="meetingDao"/>
+		</property>
+		<property name="offDao">
+			<ref bean="offDao"/>
+		</property>
+		<property name="mailDao">
+			<ref bean="mailDao"/>
+		</property>
+	</bean>
+	<bean name="/login" class="com.oa.struts.actions.LoginAction">
+		<property name="staffDao">
+			<ref bean="staffDao"/>
+		</property>
+		<property name="regimeDao">
+			<ref bean="regimeDao"/>
+		</property>
+		<property name="newsDao">
+			<ref bean="newsDao"/>
+		</property>
+		<property name="noticeDao">
+			<ref bean="noticeDao"/>
+		</property>
+		<property name="attendanceDao">
+			<ref bean="attendanceDao"/>
+		</property>
+		<property name="meetingDao">
+			<ref bean="meetingDao"/>
+		</property>
+		<property name="offDao">
+			<ref bean="offDao"/>
+		</property>
+		<property name="mailDao">
+			<ref bean="mailDao"/>
+		</property>
+	</bean>
+	<bean name="/logout" class="com.oa.struts.actions.LogoutAction"></bean>
+	<bean name="/attendance" class="com.oa.struts.actions.AttendanceAction">
+		<property name="attendanceDao">
+			<ref bean="attendanceDao"/>
+		</property>
+	</bean>
+	<bean name="/attQuerry" class="com.oa.struts.actions.AttQuerryAction">
+		<property name="attendanceDao">
+			<ref bean="attendanceDao"/>
+		</property>
+		<property name="staffDao">
+			<ref bean="staffDao"/>
+		</property>
+	</bean>
+	<bean name="/addRegime" class="com.oa.struts.actions.AddRegimeAction">
+		<property name="regimeDao">
+			<ref bean="regimeDao"/>
+		</property>
+	</bean>
+	<bean name="/deleteRegime" class="com.oa.struts.actions.DeleteRegimeAction">
+		<property name="regimeDao">
+			<ref bean="regimeDao"/>
+		</property>
+	</bean>
+	<bean name="/alterRegime" class="com.oa.struts.actions.AlterRegimeAction">
+		<property name="regimeDao">
+			<ref bean="regimeDao"/>
+		</property>
+	</bean>
+	<bean name="/addNews" class="com.oa.struts.actions.AddNewsAction">
+		<property name="newsDao">
+			<ref bean="newsDao"/>
+		</property>
+	</bean>
+	<bean name="/deleteNews" class="com.oa.struts.actions.DeleteNewsAction">
+		<property name="newsDao">
+			<ref bean="newsDao"/>
+		</property>
+	</bean>
+	<bean name="/alterNews" class="com.oa.struts.actions.AlterNewsAction">
+		<property name="newsDao">
+			<ref bean="newsDao"/>
+		</property>
+	</bean>
+	<bean name="/addNotice" class="com.oa.struts.actions.AddNoticeAction">
+		<property name="noticeDao">
+			<ref bean="noticeDao"/>
+		</property>
+	</bean>
+	<bean name="/deleteNotice" class="com.oa.struts.actions.DeleteNoticeAction">
+		<property name="noticeDao">
+			<ref bean="noticeDao"/>
+		</property>
+	</bean>
+	<bean name="/alterNotice" class="com.oa.struts.actions.AlterNoticeAction">
+		<property name="noticeDao">
+			<ref bean="noticeDao"/>
+		</property>
+	</bean>
+	<bean name="/publishMeeting" class="com.oa.struts.actions.PublishMeetingAction">
+		<property name="meetingDao">
+			<ref bean="meetingDao"/>
+		</property>
+	</bean>
+	<bean name="/alterMeeting" class="com.oa.struts.actions.AlterMeetingAction">
+		<property name="meetingDao">
+			<ref bean="meetingDao"/>
+		</property>
+	</bean>
+	<bean name="/deleteMeeting" class="com.oa.struts.actions.DeleteMeetingAction">
+		<property name="meetingDao">
+			<ref bean="meetingDao"/>
+		</property>
+	</bean>
+	<bean name="/offApply" class="com.oa.struts.actions.OffApplyAction">
+		<property name="offDao">
+			<ref bean="offDao"/>
+		</property>
+	</bean>
+	<bean name="/agreeOff" class="com.oa.struts.actions.AgreeOffAction">
+		<property name="offDao">
+			<ref bean="offDao"/>
+		</property>
+	</bean>
+	<bean name="/rejectOff" class="com.oa.struts.actions.RejectOffAction">
+		<property name="offDao">
+			<ref bean="offDao"/>
+		</property>
+	</bean>
+	<bean name="/deleteOff" class="com.oa.struts.actions.DeleteOffAction">
+		<property name="offDao">
+			<ref bean="offDao"/>
+		</property>
+	</bean>
+	<bean name="/register" class="com.oa.struts.actions.RegisterAction">
+		<property name="staffDao">
+			<ref bean="staffDao"/>
+		</property>
+	</bean>
+	<bean name="/alterStaff" class="com.oa.struts.actions.AlterStaffAction">
+		<property name="staffDao">
+			<ref bean="staffDao"/>
+		</property>
+	</bean>
+	<bean name="/deleteStaff" class="com.oa.struts.actions.DeleteStaffAction">
+		<property name="staffDao">
+			<ref bean="staffDao"/>
+		</property>
+	</bean>
+	<bean name="/alterInfo" class="com.oa.struts.actions.AlterInfoAction">
+		<property name="staffDao">
+			<ref bean="staffDao"/>
+		</property>
+	</bean>
+	<bean name="/sendMail" class="com.oa.struts.actions.SendMailAction">
+		<property name="mailDao">
+			<ref bean="mailDao"/>
+		</property>
+	</bean>
+	<bean name="/deleteMail" class="com.oa.struts.actions.DeleteMailAction">
+		<property name="mailDao">
+			<ref bean="mailDao"/>
+		</property>
+	</bean>
+	<bean name="/deleteAllMail" class="com.oa.struts.actions.DeleteAllMailAction">
+		<property name="mailDao">
+			<ref bean="mailDao"/>
+		</property>
+	</bean>
+	<bean name="/deleteOneMail" class="com.oa.struts.actions.DeleteOneMailAction">
+		<property name="mailDao">
+			<ref bean="mailDao"/>
+		</property>
+	</bean>
+	<bean name="/toRead" class="com.oa.struts.actions.ToReadAction">
+		<property name="mailDao">
+			<ref bean="mailDao"/>
+		</property>
+	</bean>
+</beans>

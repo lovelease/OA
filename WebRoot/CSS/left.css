@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+ul{
+	list-style-type:none;
+}
+body{
+	font-family:"微软雅黑";
+	font-size:18;
+	background-image:url("../IMG/leftbg.png");
+	background-repeat:repeat-y;
+}
+a:link{
+	color:#003366;
+}
+a:visited{
+	color:#003366;
+}
+p{
+	position:relative;
+	left:35px;
+}
+span{
+	text-decoration:underline;
+	color:#003366;
+	margin-left:5px;
+}
+li{
+	position:relative;
+	left:20px;
+	margin:7px;
+}
+img{
+	width:19px;
+	heigth:19px;}

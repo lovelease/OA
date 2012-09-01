@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+@import "main.css";
+
+#title{
+	position:relative;
+	color:#003366;
+	left:10px;
+	bottom:3px;
+}
+#register{
+	position:relative;
+	cursor:hand;
+	text-decoration:underline;
+	left:50px;
+}
+#alterInfo{
+	position:relative;
+	cursor:hand;
+	text-decoration:underline;
+	left:90px;
+}
+#titlebg{
+	position:absolute;
+	z-index:-1;
+	top:8px;
+	width:87px;
+	height:30px
+}
+#rounddiv{
+	position:absolute;
+	top:45px;
+	left:34px;
+	background-image:url("../IMG/background.png");
+	width:950px;
+	height:467px;
+}
+#head{
+	font-family:"华文彩云";
+	margin-top:20px;
+	margin-left:40px;
+	color:#003366;
+}
+td{
+	text-align:center;
+	border:1px solid;
+}
+.butt{
+	width:18px;
+	height:18px;
+	cursor:hand;
+}
+#content{
+	width:893px;
+	height:385px;
+	margin-left:40px;
+	overflow-y:auto;
+}

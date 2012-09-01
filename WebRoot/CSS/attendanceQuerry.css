@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+@import "regime.css";
+td{
+	width:100px;
+	line-height:20px;
+}
+#add{
+	color:red;
+	text-decoration:underline;
+	cursor:hand
+}
